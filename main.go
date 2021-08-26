@@ -13,7 +13,7 @@ func main() {
 	logic.RegisterHttp(router)
 	logic.InitLogic()
 
-	err := router.Run("127.0.0.1:8080")
+	err := router.Run("39.107.123.202:10001")
 	if err != nil {
 		log.Panicf("quantapi router.Run err:%v", err)
 	}
