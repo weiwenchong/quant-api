@@ -99,3 +99,34 @@ func ApiGetOrdersByUid(c *gin.Context) {
 		},
 	})
 }
+
+func ApiGridTrial(c *gin.Context) {
+	req := new(orderAdapter.CreateGridOrderReq)
+	if err := c.ShouldBind(&req); err != nil {
+		c.JSON(http.StatusOK, ApiReturn{
+			Ret : -1,
+			Msg: "request paramenters format error",
+		})
+		return
+	}
+
+	res, err := orderAdapter.Client.GetGridTrial(c.Request.Context(), req)
+	if c.IsAborted() {
+		return
+	}
+
+	if err != nil {
+		c.JSON(http.StatusOK, ApiReturn{
+			Ret: -1,
+			Msg: err.Error(),
+		})
+	}
+
+	c.JSON(http.StatusOK, ApiReturn{
+		Ret: 1,
+		Data: &ApiData{
+			Ext: res,
+			Ent: nil,
+		},
+	})
+}

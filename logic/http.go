@@ -12,6 +12,7 @@ func RegisterHttp(router *gin.Engine) {
 	router.POST("/quant/order/grid/create/", order.ApiCreateGridOrder)
 	router.POST("/quant/order/close/", order.ApiCloseOrder)
 	router.POST("/quant/order/list/", order.ApiGetOrdersByUid)
+	router.POST("/quant/order/grid/trial", order.ApiGridTrial)
 }
 
 
