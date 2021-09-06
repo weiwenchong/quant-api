@@ -2,13 +2,14 @@ package order
 
 import (
 	"github.com/gin-gonic/gin"
-	orderAdapter "github.com/wenchong-wei/quant-order/pub"
+	orderAdapter "github.com/wenchong-wei/quant-order/adapter"
+	order "github.com/wenchong-wei/quant-order/pub"
 	. "github.com/wenchong-wei/quant-api/common"
 	"net/http"
 )
 
 func ApiCreateGridOrder(c *gin.Context) {
-	req := new(orderAdapter.CreateGridOrderReq)
+	req := new(order.CreateGridOrderReq)
 	if err := c.ShouldBind(&req); err != nil {
 		c.JSON(http.StatusOK, ApiReturn{
 			Ret : -1,
@@ -39,7 +40,7 @@ func ApiCreateGridOrder(c *gin.Context) {
 }
 
 func ApiCloseOrder(c *gin.Context) {
-	req := new(orderAdapter.CloseOrderReq)
+	req := new(order.CloseOrderReq)
 	if err := c.ShouldBind(&req); err != nil {
 		c.JSON(http.StatusOK, ApiReturn{
 			Ret : -1,
@@ -70,7 +71,7 @@ func ApiCloseOrder(c *gin.Context) {
 }
 
 func ApiGetOrdersByUid(c *gin.Context) {
-	req := new(orderAdapter.GetOrdersByUidReq)
+	req := new(order.GetOrdersByUidReq)
 	if err := c.ShouldBind(&req); err != nil {
 		c.JSON(http.StatusOK, ApiReturn{
 			Ret : -1,
@@ -101,7 +102,7 @@ func ApiGetOrdersByUid(c *gin.Context) {
 }
 
 func ApiGridTrial(c *gin.Context) {
-	req := new(orderAdapter.CreateGridOrderReq)
+	req := new(order.CreateGridOrderReq)
 	if err := c.ShouldBind(&req); err != nil {
 		c.JSON(http.StatusOK, ApiReturn{
 			Ret : -1,
