@@ -1,8 +1,8 @@
 package logic
 
-import orderAdapter "github.com/wenchong-wei/quant-order/adapter"
+import (
+
+)
 
 func InitLogic() {
-	// init调用服务
-	orderAdapter.InitClient()
 }

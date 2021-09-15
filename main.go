@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/wenchong-wei/quant-api/logic"
+	"github.com/weiwenchong/quant-api/logic"
 	"log"
 )
 

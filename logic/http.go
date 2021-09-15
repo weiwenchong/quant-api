@@ -2,8 +2,8 @@ package logic
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/wenchong-wei/quant-api/api/order"
-	. "github.com/wenchong-wei/quant-api/common"
+	"github.com/weiwenchong/quant-api/api/order"
+	. "github.com/weiwenchong/quant-api/common"
 	"net/http"
 )
 

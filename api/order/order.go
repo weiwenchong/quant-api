@@ -2,9 +2,9 @@ package order
 
 import (
 	"github.com/gin-gonic/gin"
-	orderAdapter "github.com/wenchong-wei/quant-order/adapter"
-	order "github.com/wenchong-wei/quant-order/pub"
-	. "github.com/wenchong-wei/quant-api/common"
+	orderAdapter "github.com/weiwenchong/quant-order/adapter"
+	order "github.com/weiwenchong/quant-order/pub"
+	. "github.com/weiwenchong/quant-api/common"
 	"net/http"
 )
 
