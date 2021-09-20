@@ -1,1 +1,1 @@
-# quant-api
+# 量化交易api服务,使用gin框架.
